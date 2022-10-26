@@ -1,0 +1,66 @@
+.container{
+    height: calc(100vh - 110px);
+    display: flex;
+}
+
+.left{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right{
+    flex: 1;
+}
+
+.imgContainer{
+    width: 80%;
+    height: 80%; /* this width and height were useless untill position relative was used   */
+    position: relative;
+}
+
+.price{
+    color: #d1411e;
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid #d1411e;
+}
+
+.sizes{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.size{
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+}
+
+.size:nth-child(2){
+    width: 45px;
+    height: 45px;
+}
+
+.size:last-child{
+    width: 55px;
+    height: 55px;
+}
+
+.number{
+    position: absolute;
+    top:-5px;
+    right: -20px;
+    background-color: #d1411e;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.number:nth-child(2){
+    right: -30px;
+}
