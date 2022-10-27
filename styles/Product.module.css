@@ -1,6 +1,7 @@
 .container{
-    height: calc(100vh - 110px);
+    height: calc(110vh - 100px);
     display: flex;
+    /* padding: 20px 0; */
 }
 
 .left{
@@ -56,11 +57,44 @@
     position: absolute;
     top:-5px;
     right: -20px;
-    background-color: #d1411e;
+    background-color: teal;
     border-radius: 10px;
     padding: 0 5px;
 }
 
 .number:nth-child(2){
     right: -30px;
+}
+
+.ingredients{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checkbox{
+    width: 20px;
+    height: 20px;
+}
+
+.quantity{
+    width: 50px;
+    height: 30px;
+}
+
+.button{
+    height: 30px;
+    margin-left: 10px;
+    background-color: #d1411e;
+    color: white;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
 }
