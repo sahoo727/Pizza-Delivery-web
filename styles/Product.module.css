@@ -98,3 +98,26 @@
     font-weight: 500;
     cursor: pointer;
 }
+
+@media screen and (max-width: 480px) {
+    .container{
+        height: auto;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .imgContainer{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .sizes{
+        width: 80%;
+        margin: 0 25px;
+    }
+
+    .ingredients{
+        flex-direction: column;
+    }
+}
