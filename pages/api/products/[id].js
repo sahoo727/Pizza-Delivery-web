@@ -1,22 +1,30 @@
 import dbConnect from "../../../util/mongo";
 import Product from "../../../models/Product";
 
-// backend - 1 - after creating models of moongoose try testing with GET, POST using postman if you send and get information just in backend
 export default async function handler(req, res) {
-  const { method } = req;
+  const { method, query: {id} } = req;
 
   dbConnect();
 
   if(method === "GET"){
     try {
-      const products = await Product.find();
-      res.status(200).json(products);
+      const product = await Product.findById(id);
+      res.status(200).json(product);
     } catch (error) {
       res.status(500).json(error);
     }
   };
   
-  if(method === "POST"){
+  if(method === "PUT"){
+    try {
+      const product =  await Product.create(req.body);
+      res.status(200).json();
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  };
+
+  if(method === "PUT"){
     try {
       const product =  await Product.create(req.body);
       res.status(200).json();
